@@ -5,7 +5,7 @@ import os
 
 
 def cropImage():
-    image = cv2.imread('face_files/img/test.jpg')
+    image = cv2.imread('{folder_path}/{image.jpg}')
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
@@ -17,7 +17,7 @@ def cropImage():
         cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
         roi_color = image[y:y + h, x:x + w]
         print("[INFO] Object found. Saving locally.")
-        cv2.imwrite('detected/img/face_cropped.jpg', roi_color)
+        cv2.imwrite('{folder_for_detected_faces}/{image.jpg}', roi_color)
 
 
 
@@ -28,7 +28,7 @@ def augumentImage():
     
     my_test_datagen  = ImageDataGenerator( rescale = 1.0/255, )
         
-    my_test_generator=my_test_datagen.flow_from_directory('detected',
+    my_test_generator=my_test_datagen.flow_from_directory('{folder_where_you_stored_detected_face}',
                                                         class_mode  = 'categorical',
                                                         #color_mode='grayscale',
                                                         target_size = (64, 64),
@@ -52,7 +52,7 @@ def displayImage():
     for i in range (0,1):
         plt.title(emotions[y_pred[i]])
         #image = x_batch[i]
-        img = mpimg.imread('detected/img/face_cropped.jpg')
+        img = mpimg.imread('{folder_with_detected_face}/{image.jpg}')
         plt.imshow(img)
         plt.show()
 
@@ -71,7 +71,7 @@ while cap.isOpened():
     cv2.imshow('Emotion Classifier',gray)
     key = cv2.waitKey(1) & 0xFF
     if key == ord("q"):
-        cv2.imwrite('face_files/img/test.jpg',frame)
+        cv2.imwrite('{folder_path}/{image.jpg}',frame)
         cap.release()
         cv2.destroyAllWindows()
         cropImage()
