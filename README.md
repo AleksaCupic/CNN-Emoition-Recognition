@@ -5,7 +5,7 @@ This project won	4th place at Southeastern CCSC (Consortium for Computing Scienc
 
 To run this program you will need: keras, numpy, cv2, matplotlib
 
-# DEMO Screenshots
+# Demo Screenshots
 <img src="https://i.ibb.co/mhxSY6M/Screen-Shot-2020-08-27-at-5-32-54-PM.png" /> 
 <img src="https://i.ibb.co/JyZJYX6/Screen-Shot-2020-08-27-at-5-33-10-PM.png"/>
 
