@@ -10,10 +10,11 @@ To run this program you will need: keras, numpy, cv2, matplotlib
 <img src="https://i.ibb.co/JyZJYX6/Screen-Shot-2020-08-27-at-5-33-10-PM.png"/>
 
 <br/>
-<b>How to use it</b>
+<b>How to use it</b><br />
 Once you download the project go to project directory and run the following command: 
 <br />
 <i>python3 demo.py</i>
+<br />
 <br />
 Press Q to take a picture
 <br />
