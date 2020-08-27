@@ -12,11 +12,11 @@ To run this program you will need: keras, numpy, cv2, matplotlib
 <br/>
 <b>How to use it</b>
 Once you download the project go to project directory and run the following command: 
-```
-python3 demo.py
-```
+<br />
+<i>python3 demo.py</i>
 <br />
 Press Q to take a picture
+<br />
 <br />
 Live Web Demo: https://loving-davinci-dd7336.netlify.app/
 <br />
